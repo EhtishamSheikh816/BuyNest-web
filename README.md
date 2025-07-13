@@ -62,7 +62,7 @@ To run this project locally:
 
 ## 🖥️ Live Demo
 
-You can view a live demo of this project by visiting [this link](https://your-username.github.io/e-commerce-website/).
+You can view a live demo of this project by visiting [this link](https://buy-nest-web.vercel.app).
 
 ---
 
