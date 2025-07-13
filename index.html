@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>BuyNest</title>
+  </head>
+  <body>
+    <!--                                                              HEADER                                                             -->
+    <nav
+      class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top bg-gray-600 text-white"
+    >
+      <div
+        class="container-fluid d-flex align-items-center justify-content-between"
+      >
+        <a class="navbar-brand" href="#">BuyNest</a>
+
+        <!-- Cart Icon stays on right even in mobile -->
+        <p class="text-white mb-0 order-3">🛒 Cart</p>
+
+        <!-- Toggle button for mobile -->
+        <button
+          class="navbar-toggler order-2"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links centered -->
+        <div
+          class="collapse navbar-collapse justify-content-center order-1 order-lg-2"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#product">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#testimonials">Testonomials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--                                                           HERO SECTION                                                          -->
+    <section
+      id="hero"
+      class="hero-section text-white d-flex align-items-end"
+      style="
+        height: 80vh;
+        background: url('home-hero-bg.jpg') no-repeat center center/cover;
+        position: relative;
+      "
+    >
+      <div class="container pb-5">
+        <div class="row">
+          <div class="col text-center">
+            <h1 class="display-3 fw-bold">
+              Timeless Fashion for the Modern Wardrobe
+            </h1>
+            <p class="lead">
+              Discover timeless fashion for Men, Women, and Kids – crafted for
+              comfort, designed for confidence.
+            </p>
+            <a
+              href="#products"
+              class="btn btn-primary btn-lg mt-3"
+              style="background-color: #212529; border-radius: 22px !important"
+              >Explore Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--                                                             PRODUCTS                                                            -->
+    <section class="py-5 bg-light">
+      <h2 class="mb-4 fs-1 text-center text-center fw-bold">Our Products</h2>
+      <div class="m-3">
+        <div class="row g-4" id="product"></div>
+      </div>
+    </section>
+
+    <!--                                                            TESTONOMIA                                                           -->
+    <section
+      class="py-5 bg-light"
+      id="testimonials"
+      style="background-color: #212529 !important"
+    >
+      <div class="container text-center">
+        <h2 class="fw-bold mb-5 text-white">💬 What Our Customers Say</h2>
+
+        <div class="row g-4">
+          <!-- Testimonial 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card h-100 shadow-sm border-0"
+              style="background-color: #343a40; color: white"
+            >
+              <div class="card-body">
+                <p class="card-text">
+                  "Amazing quality and fast delivery. I love the smart watch I
+                  ordered!"
+                </p>
+              </div>
+              <div class="card-footer bg-transparent d-flex align-items-center">
+                <img
+                  src="data:image/jpeg;base64,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"
+                  class="rounded-circle me-3"
+                  alt="User 1"
+                />
+                <div>
+                  <strong>Sarah Khan</strong><br />
+                  <small class="text-muted" style="color: beige !important"
+                    >Karachi, PK</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card h-100 shadow-sm border-0"
+              style="background-color: #343a40; color: white"
+            >
+              <div class="card-body">
+                <p class="card-text">
+                  "Customer support is fantastic and the products are just as
+                  described. Highly recommended!"
+                </p>
+              </div>
+              <div class="card-footer bg-transparent d-flex align-items-center">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn9zilY2Yu2hc19pDZFxgWDTUDy5DId7ITqA&s"
+                  class="rounded-circle me-3"
+                  alt="User 2"
+                />
+                <div>
+                  <strong>Ali Raza</strong><br />
+                  <small class="text-muted" style="color: beige !important"
+                    >Lahore, PK</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card h-100 shadow-sm border-0"
+              style="background-color: #343a40; color: white"
+            >
+              <div class="card-body">
+                <p class="card-text">
+                  "This is now my favorite online store! Great deals and
+                  reliable delivery."
+                </p>
+              </div>
+              <div class="card-footer bg-transparent d-flex align-items-center">
+                <img
+                  src="data:image/png;base64,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"
+                  class="rounded-circle me-3"
+                  alt="User 3"
+                />
+                <div>
+                  <strong>Ayesha Malik</strong><br />
+                  <small class="text-muted" style="color: beige !important"
+                    >Islamabad, PK</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--                                                             CONTACT                                                             -->
+    <section class="contact-section" style="color: black" id="contact">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-5">📬 Contact Us</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-lg-6">
+            <div class="contact-card">
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="5"
+                    placeholder="Write your message..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--                                                             FOOTER                                                              -->
+    <!-- Footer Start -->
+    <footer class="bg-dark text-light pt-5 pb-4">
+      <div class="container text-md-start text-center">
+        <div class="row">
+          <!-- Column 1: Logo/About -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold text-uppercase mb-3">ShopEase</h5>
+            <p>
+              Your one-stop shop for modern gadgets, fashion, and more. Quality
+              you can trust.
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-md-4 mb-4">
+            <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Shop</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Contact</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">About Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Social Icons -->
+          <div class="col-md-4 mb-4">
+            <h6 class="text-uppercase fw-bold mb-3">Follow Us</h6>
+            <a href="#" class="text-light me-3"
+              ><i class="bi bi-facebook fs-4"></i
+            ></a>
+            <a href="#" class="text-light me-3"
+              ><i class="bi bi-instagram fs-4"></i
+            ></a>
+            <a href="#" class="text-light me-3"
+              ><i class="bi bi-twitter fs-4"></i
+            ></a>
+            <a href="#" class="text-light"
+              ><i class="bi bi-linkedin fs-4"></i
+            ></a>
+          </div>
+        </div>
+
+        <hr class="border-light" />
+
+        <div class="text-center pt-2">
+          <p class="mb-0">&copy; 2025 Ehtisham. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Bootstrap + Icons CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
